@@ -19,3 +19,5 @@ const getCurrentTime = function (currentTime) {
 };
 
 vimeoPlayer.on('timeupdate', throttle(getCurrentTime, 1000));
+
+vimeoPlayer.setCurrentTime(JSON.parse(localStorage.getItem(time_key)) || 0);
